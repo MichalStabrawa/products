@@ -1,0 +1,114 @@
+<html>
+
+
+
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#btn").click(function () {
+        $('#productsTable').empty();
+
+        let searchPharse = $("#inputVal").val();
+        search(searchPharse);
+      })
+
+      function search(searchVal) {
+        let tableBody = document.getElementById('productsTable');
+        let methodArguments = {
+          searchedPhrase: searchVal
+        }
+        $.get("http://localhost:5000/Products/GetAllProducts",methodArguments, function (data, status) {
+
+        for (let i = 0; i < data.length; i++) {
+          var tableOne = document.getElementById('productsTable');
+          var bodyTable = document.createElement('tr');
+          var bodyWiersz = document.createElement('td');
+          var wierszTresc = document.createTextNode(data[i].productID);
+          bodyWiersz.appendChild(wierszTresc);
+          bodyTable.appendChild(bodyWiersz);
+          tableOne.appendChild(bodyTable);
+
+          var rowProductName = document.createElement('td');
+          var rowProductNameText = document.createTextNode(data[i].productName);
+          rowProductName.appendChild(rowProductNameText);
+          bodyTable.appendChild(rowProductName);
+
+          var rowSuplier = document.createElement('td');
+          var rowSuplierText = document.createTextNode(data[i].supplierID);
+          rowSuplier.appendChild(rowSuplierText);
+          bodyTable.appendChild(rowSuplier);
+
+          var rowCategoryId = document.createElement('td');
+          var rowCategoryIdText = document.createTextNode(data[i].categoryID);
+          rowCategoryId.appendChild(rowCategoryIdText);
+          bodyTable.appendChild(rowCategoryId);
+
+          var rowUnit = document.createElement("td");
+          var rowUnitText = document.createTextNode(data[i].unitPrice);
+          rowUnit.appendChild(rowUnitText);
+          bodyTable.appendChild(rowUnit);
+
+          var rowDis = document.createElement('td');
+          var rowDisText = document.createTextNode(data[i].discontinued);
+          rowDis.appendChild(rowDisText);
+          bodyTable.appendChild(rowDis);
+
+
+
+        }
+      });
+
+      }
+
+
+     
+
+     
+    });
+
+   
+
+    
+
+   
+
+  </script>
+
+
+
+
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">ASP NET</h1>
+      <p class="lead">CREATE TABLE and UPDATE in SQL DATABASE</p>
+    </div>
+  </div>
+  <input type="text" id="inputVal">
+  <button id="btn">Szukaj</button>
+
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">ProductId</th>
+        <th scope="col">ProductionName</th>
+        <th scope="col">SuplierId</th>
+        <th scope="col">CategoryId</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Discontinued</th>
+
+
+      </tr>
+    </thead>
+  <tbody id="productsTable"></tbody>
+  </table>
+</body>
+
+</html>

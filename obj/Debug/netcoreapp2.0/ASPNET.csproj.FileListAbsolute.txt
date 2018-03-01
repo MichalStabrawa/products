@@ -1,0 +1,10 @@
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\bin\Debug\netcoreapp2.0\ASPNET.deps.json
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\bin\Debug\netcoreapp2.0\ASPNET.runtimeconfig.json
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\bin\Debug\netcoreapp2.0\ASPNET.runtimeconfig.dev.json
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\bin\Debug\netcoreapp2.0\ASPNET.dll
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\bin\Debug\netcoreapp2.0\ASPNET.pdb
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\obj\Debug\netcoreapp2.0\ASPNET.csproj.CoreCompileInputs.cache
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\obj\Debug\netcoreapp2.0\ASPNET.AssemblyInfoInputs.cache
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\obj\Debug\netcoreapp2.0\ASPNET.AssemblyInfo.cs
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\obj\Debug\netcoreapp2.0\ASPNET.dll
+C:\Users\Zuzanna Słowik\Desktop\ASPNET\obj\Debug\netcoreapp2.0\ASPNET.pdb
